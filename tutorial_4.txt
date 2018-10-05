@@ -1,0 +1,11 @@
+1. Ambil list flight yang berada pada pilot terkait, masukan ke model dan 
+lakukan each(loop) pada halaman view-pilot dan tampilkan detailnya.
+
+2. Membuat dulu pada kedua service fungsi yang melakukan pendeletan objek berdasarkan FlightNumber.
+pada controller dilakukan mapping yang mengambil FlightNumber dan atribut dari pilot/flight terkait 
+dan memangpanggil fungsi delete dari servicenya.
+
+3. Controller pilot/flight akan melakukan mapping ke halaman yang mengambil nomor lisensi atau nomor penerbangan, dan kita diminta untuk memasukan data kembali seperti pada saat add
+
+4.Menampilkan daftar flight dan pilotnya, kita cari flight berdasarkan nomor penerbangan, 
+flight akan dicari melewati fungsi yang dibantu oleh jpa...
