@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thyeleaf.org">
+	<head>
+		<title>View Pilot Flight</title>
+	</head>
+	<body>
+		<h3><span th:text="'Pilot License Number :' + ${pilot.licenseNumber}"></span></h3>
+		<h3><span th:text="'Name : ' +  ${pilot.name}"></span></h3>
+		<h3><span th:text="'Fly Hour : ' + ${pilot.flyHour}"></span></h3>
+		<td><a th:href="@{'/pilot/delete/'+${pilot.licenseNumber}}">Delete</a></td>
+		<td><a th:href="@{'/pilot/update/'+${pilot.licenseNumber}}">Update</a></td>
+		<h3></h3>
+		<tr th:each="flight : ${listFlight}">
+		   <td>
+		   <h3><span th:text="'Flight Number : '+ ${flight.flightNumber}"></span></h3>
+		   <h3><span th:text="'Origin : '+ ${flight.origin}"></span></h3>
+		   <h3><span th:text="'Destination : '+ ${flight.destination}"></span></h3>
+		   <h3><span th:text="'Time : '+ ${flight.time}"></span></h3>
+		   <a th:href="@{'/flight/delete/'+${flight.flightNumber}}">Delete</a>
+		   <a th:href="@{'/flight/update/'+${flight.flightNumber}}">Update</a>
+		   </td>
+		</tr>
+		<td><a th:href="@{'/flight/add/'+${pilot.licenseNumber}}">Add Flight</a></td>
+		<td><a th:href="@{/}">Home</a></td>
+	</body>
+</html>
